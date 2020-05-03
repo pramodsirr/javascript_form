@@ -9,37 +9,19 @@
   <h1> <center> Welcome to Pramod's Website </center></h1>
 
 	<div id ="header">
-	<p>
-<form name="myform" onsubmit="return validation()">
-	username: <input type="text" name="" id="user"> <span id="username"></span><br> <br>
-	password: <input type="password" name="" id="pass"> <span id="password"></span><br> <br>
-	      &emsp; &emsp; <input type="submit" name="submit">
+	
+<form name="myform" method="post">
+	username: <input type="text" placeholder="Enter Username" name="uname" required> <br> <br>
+	
+	password: <input type="text" placeholder="Enter password" name="pass" required> <br> <br>
+	
+	      &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
+	      <input type="submit" name="submit" onclick="Welcome">
+
 </form>
 
-<script>
-	function validation(){
-var un = document.getElementById("user").value;
-var ps = document.getElementById("pass").value;
 
-if (un==""){
-document.getElementById("username").innerHTML="**please fill userrname";
-return false;
 
-}
-if (ps==""){
-document.getElementById("password").innerHTML="**please fill passsword";
-return false;
-
-}
-
-else {
-
-alert("done");
-	return true;
-}
-}
-</script>
-</p>
 </div>
 <br>
 <center><button onclick="showDate()"> show Date </button> </center>
