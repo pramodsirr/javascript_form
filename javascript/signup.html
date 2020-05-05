@@ -5,42 +5,65 @@
  
 </head>
 <body bgcolor="#e8e8e1">
-<form name="signup" method="post">
+<form name="signup" method="post" action="pramod.html" onsubmit="myFunction()">
 	<p >
 	Lirst Name: <input type="text" placeholder="Enter first name" name="fname" required> <br> <br>
     Last Name: <input type="text" placeholder="Enter first name" name="fname" required> <br> <br>
-    phone Number    <input type="number" placeholder="Enter phone" name="phone" required> <br> <br>
-    Email Addreess:     <input type="number" placeholder="Enter email" name="phone" required> <br> <br>
+    phone Number    <input type="phone" placeholder="Enter phone" name="phone" required> <br> <br>
+    Email Addreess:     <input type="email" placeholder="Enter email" name="email" required> <br> <br>
 
 	Username: <input type="text" placeholder="Enter Username" name="uname" required> <br> <br>
 	
       <label>password :
-  <input name="password" id="password" type="password" onkeyup='check();' />
+  <input name="password" id="password" type="password" placeholder="password"   required="########" onkeyup='check();' />
+  <input type="checkbox" onclick="test1()">Show Password
 </label>
 <br>
 <label>confirm password:
-  <input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
+  <input type="password" name="confirm_password" id="confirm_password"  placeholder="confirm password" required="########" onkeyup='check();' /> 
   <span id='message'></span>
+  <input type="checkbox" onclick="test()">Show Password
 </label>
            </p>
 	      &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
-	      <input type="submit" name="submit">
+	      <input type="submit" name="submit" onsubmit="check1()">
 
 
 </form>
-<script type="text/javascript">
 
-var check = function() {
-  if (document.getElementById('password').value ==
-    document.getElementById('confirm_password').value) {
-    document.getElementById('message').style.color = 'green';
-    document.getElementById('message').innerHTML = 'matching';
-  } else {
-    document.getElementById('message').style.color = 'red';
-    document.getElementById('message').innerHTML = 'not matching';
-  }
-}
+
+
+
+  <p id="ad" >
+<button onclick="myFunction()"></button> 
+
+<script src ="script.js">
 </script>
+
+  <p id="confirm_password" >
+<button onclick="test()"></button> 
+
+<script src ="script.js">
+</script>
+
+  <p id="password" >
+<button onclick="test()"></button> 
+
+<script src ="script.js">
+</script>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
