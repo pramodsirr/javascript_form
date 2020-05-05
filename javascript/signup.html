@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>sign up: for  the study materials</title>
+ 
 </head>
-<body bgcolor="cyan">
+<body bgcolor="#e8e8e1">
 <form name="signup" method="post">
 	<p >
 	Lirst Name: <input type="text" placeholder="Enter first name" name="fname" required> <br> <br>
@@ -13,17 +14,33 @@
 
 	Username: <input type="text" placeholder="Enter Username" name="uname" required> <br> <br>
 	
-	Rassword: <input type="text" placeholder="Enter Password" name="pass" required=""> <br> <br>
-	Repeat Password: <input type="text" placeholder="Repeat Password" name="pass" > <br> <br>
-	</p>
+      <label>password :
+  <input name="password" id="password" type="password" onkeyup='check();' />
+</label>
+<br>
+<label>confirm password:
+  <input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> 
+  <span id='message'></span>
+</label>
+           </p>
 	      &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; 
 	      <input type="submit" name="submit">
 
+
 </form>
+<script type="text/javascript">
 
-
-
-
+var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'matching';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'not matching';
+  }
+}
+</script>
 
 
 </body>
